@@ -1,15 +1,15 @@
 import { Container, CssBaseline, Grid, makeStyles } from '@material-ui/core';
-import { JsxElement, TypeElement } from 'typescript';
+
 import { PostsStateI } from '../../../store/reducers/posts';
 import { Posts } from '../../../types/Posts';
 import PostsList from '../../organisms/PostsList';
 import Subscribe from '../../organisms/Subscribe';
 import MainLayout from '../MainLayout';
-interface IHomePageTemplateProps {
+interface IBlogPostPageTemplateProps {
   header: React.ReactNode,
   footer: React.ReactNode,
-  posts: React.ReactNode,
-  subscribe:React.ReactNode
+  post: React.ReactNode,
+  relatedPosts:React.ReactNode
 
 }
 const useStyles = makeStyles((theme) => ({
@@ -21,32 +21,27 @@ const useStyles = makeStyles((theme) => ({
   }
 
 }));
-const HomePageTemplate: React.FunctionComponent<IHomePageTemplateProps> = ({ header, footer,subscribe, posts, children }) => {
+const BlogPostPageTemplate: React.FunctionComponent<IBlogPostPageTemplateProps> = ({ header, footer, post, relatedPosts,children }) => {
   const classes = useStyles();
   return <MainLayout header={header} footer={footer}>
 
     <div className={classes.root}>
       {/* <div classes={{ root: classes.root }}> */}
       {/* This is where we can structure the template for our homepage */}
-      <Grid container spacing={1}>
-        <Grid item xs={12} md={9}>
-          <Grid container direction="column">
+      <Grid container spacing={1} justify="center">
+        <Grid item xs={12} md={6}>
+          <Grid container direction="column" spacing={1}>
+
             <Grid item>
-              {/* <Hero  */}
-            </Grid>
-            <Grid item>
-              {posts}
+              {post}
 
             </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <Grid container direction="column">
             <Grid item>
-              {subscribe}
+              {relatedPosts}
             </Grid>
           </Grid>
         </Grid>
+
       </Grid>
 
     </div>
@@ -54,4 +49,4 @@ const HomePageTemplate: React.FunctionComponent<IHomePageTemplateProps> = ({ hea
   </MainLayout>
 };
 
-export default HomePageTemplate;
+export default BlogPostPageTemplate;

@@ -2,6 +2,7 @@ import { Container, Grid, Link, makeStyles, Typography } from '@material-ui/core
 import * as React from 'react';
 import { Paper } from "@material-ui/core";
 import { FC } from 'react';
+import MadeWith from '../../molecules/MadeWith';
 interface IFooterProps {
 }
 const useStyles = makeStyles((theme) => ({
@@ -24,9 +25,20 @@ const useStyles = makeStyles((theme) => ({
 const Footer: React.FunctionComponent<IFooterProps> = (props) => {
     const classes = useStyles();
     return (<Container maxWidth="sm">
-        <Grid container direction="column">
+        <Grid container direction="column" justify="center" alignItems="center" alignContent="center">
             <Grid item>
-                <Typography align="center">Made by <Link href="https://github.com/trentschnee">Trent Schneweis</Link></Typography>
+                <Grid container spacing={1}>
+                    <Grid item>
+                    <Typography>Made with</Typography>
+                    </Grid>
+                    <Grid item>
+                    <MadeWith />
+                    </Grid>
+                </Grid>
+             
+            </Grid>
+            <Grid item>
+                <Typography>Made by <Link href="https://github.com/trentschnee">Trent Schneweis</Link></Typography>
             </Grid>
         </Grid>
     </Container>)

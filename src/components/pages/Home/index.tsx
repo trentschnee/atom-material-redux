@@ -1,17 +1,23 @@
 import * as React from 'react';
-import { useDispatch } from 'react-redux';
-import { usePosts } from '../../../hooks/usePosts';
-import { fetchPosts } from '../../../store/actions/posts';
-import HomeTemplate from '../../templates/Home';
-interface IHomePageProps {
-}
+import Footer from '../../organisms/Footer';
+import Header from '../../organisms/Header';
+import Subscribe from '../../organisms/Subscribe';
 
+import HomeTemplate from '../../templates/Home';
+import PostsContainer from './containers/PostsContainer';
+interface IHomePageProps {
+
+}
+// TODO: Make it have a main layout for pages?
+// Up to the page to determine what to stick where
 const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
   // On loan, fetch posts
-  const {posts} = usePosts();
-  return (<HomeTemplate posts={posts}>
-      
-  </HomeTemplate>)
+  
+  return (
+  
+  <HomeTemplate header={<Header/>} footer={<Footer/>} posts={<PostsContainer/>} subscribe={<Subscribe/>}/>
+  
+  )
 };
 
 export default HomePage;

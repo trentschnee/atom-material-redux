@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
+import { Link as RouterLink } from 'react-router-dom';
 import { Link } from '@material-ui/core';
 // import MenuIcon from '@material-ui/icons/Menu';
 
@@ -41,9 +42,9 @@ const Header:React.FC = () => {
     return <div className={classes.root}>
         <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
-          <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+          <Link variant="h6" color="inherit" noWrap className={classes.toolbarTitle} component={RouterLink} to="/">
             Your Blog Company
-          </Typography>
+          </Link>
           <nav>
             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
               Categories

@@ -23,18 +23,22 @@ const useStyles = makeStyles((theme) => ({
     },
 
 }));
-const MainLayout: React.FunctionComponent = ({ children }) => {
+interface IMainLayout {
+    header: React.ReactNode,
+    footer: React.ReactNode,
+}
+const MainLayout: React.FunctionComponent<IMainLayout> = ({ header, footer, children }) => {
     const classes = useStyles();
     return <div className={classes.root}>
 
         <header>
-            <Header />
+            {header}
         </header>
         <main className={classes.MainLayoutContent}>
             {children}
         </main>
         <footer className={classes.footer}>
-            <Footer />
+            {footer}
         </footer>
     </div>
 };

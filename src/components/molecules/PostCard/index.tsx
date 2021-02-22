@@ -1,14 +1,17 @@
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Typography } from '@material-ui/core';
+import {    Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Typography } from '@material-ui/core';
 import * as React from 'react';
+import { Link } from 'react-router-dom';
+import Button  from '../../atoms/Button';
 import Excerpt from '../../atoms/ExcerptText';
 
 interface IPostCardProps {
     title: string,
     body: string,
+    onShare:()=>void,
     id: number
 }
 
-const PostCard: React.FunctionComponent<IPostCardProps> = ({ title, body, id }) => {
+const PostCard: React.FunctionComponent<IPostCardProps> = ({ title, body,onShare, id }) => {
     return (<Card>
 
 
@@ -28,11 +31,11 @@ const PostCard: React.FunctionComponent<IPostCardProps> = ({ title, body, id }) 
         </CardContent>
 
         <CardActions>
-            <Button size="small" color="primary">
+            <Button size="small" color="primary" onClick={onShare}>
                 Share
       </Button>
-            <Button size="small" color="primary" href={`/blog/post/${id}`}>
-                Learn More
+            <Button size="small" color="primary" component={Link} to={`/post/${id}`}>
+                Read Post
       </Button>
         </CardActions>
     </Card>)
