@@ -5,12 +5,8 @@ import Subscribe from '../../organisms/Subscribe';
 
 import HomeTemplate from '../../templates/Home';
 import PostsContainer from './containers/PostsContainer';
-interface IHomePageProps {
 
-}
-// TODO: Make it have a main layout for pages?
-// Up to the page to determine what to stick where
-const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
+const HomePage: React.FunctionComponent = () => {
   // On loan, fetch posts
   
   return (

@@ -30,12 +30,12 @@ const PostsContainer: React.FunctionComponent<IPostsContainerProps> = (props) =>
     // handleViewPost(){
 
     // }
-    return (<Section title="Blog Posts">
-        <PostsList posts={postsSpread} onShare={handleShare} />
-        {loadingMoreClicks * 20 < posts.data.length && (<Button classes={{ root: classes.root }} onClick={handleLoadMore} >Load More Posts ...</Button>)}
+    return (
+        <PostsList title={"Blog Posts"} posts={postsSpread} onShare={handleShare}>
+            {loadingMoreClicks * 20 < posts.data.length && (<Button classes={{ root: classes.root }} onClick={handleLoadMore} >Load More Posts ...</Button>)}
+        </PostsList>
 
-
-    </Section>)
+    )
 
 
 }

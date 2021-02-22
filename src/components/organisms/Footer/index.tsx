@@ -5,25 +5,11 @@ import { FC } from 'react';
 import MadeWith from '../../molecules/MadeWith';
 interface IFooterProps {
 }
-const useStyles = makeStyles((theme) => ({
-    //   root: {
-    //     flexShrink: 0,
 
-    //     // marginTop: 'auto',
-    //     borderTop: `1px solid ${theme.palette.divider}`,
-    //     // backgroundColor:
-    //     //   theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
-
-    //   },
-    footerWrapper: {
-        padding: theme.spacing(2),
-    }
-    // nav
-}));
 
 
 const Footer: React.FunctionComponent<IFooterProps> = (props) => {
-    const classes = useStyles();
+  
     return (<Container maxWidth="sm">
         <Grid container direction="column" justify="center" alignItems="center" alignContent="center">
             <Grid item>
@@ -38,7 +24,7 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
              
             </Grid>
             <Grid item>
-                <Typography>Made by <Link href="https://github.com/trentschnee">Trent Schneweis</Link></Typography>
+                <Typography>Made by <Link href="https://github.com/trentschnee">Trent Schneweis</Link> and Erick C.</Typography>
             </Grid>
         </Grid>
     </Container>)

@@ -12,18 +12,16 @@ interface IRelatedPostsContainerProps {
 const RelatedPostsContainer: React.FunctionComponent<IRelatedPostsContainerProps> = (props) => {
     const { posts } = usePosts();
     const postsSpread = { ...posts, data: posts.data.reverse().slice(0, 4) }
-   
+
     function handleShare() {
         alert('share')
     }
-  
+
     // handleViewPost(){
 
     // }
-    return (<Section title="Related Posts">
-        <PostsList posts={postsSpread} onShare={handleShare} />
-
-
-    </Section>)
+    return (
+        <PostsList title="Related Posts" posts={postsSpread} onShare={handleShare} />
+    )
 }
 export default RelatedPostsContainer;
