@@ -26,7 +26,6 @@ const HomePageTemplate: React.FunctionComponent<IHomePageTemplateProps> = ({ hea
   return <MainLayout header={header} footer={footer}>
 
     <div className={classes.root}>
-      {/* <div classes={{ root: classes.root }}> */}
       {/* This is where we can structure the template for our homepage */}
       <Grid container spacing={1}>
         <Grid item xs={12} md={9}>

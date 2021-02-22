@@ -27,7 +27,7 @@ const BlogPostPageTemplate: React.FunctionComponent<IBlogPostPageTemplateProps> 
 
     <div className={classes.root}>
       {/* <div classes={{ root: classes.root }}> */}
-      {/* This is where we can structure the template for our homepage */}
+      {/* This is where we can structure the template for our blog post page */}
       <Grid container spacing={1} justify="center">
         <Grid item xs={12} md={6}>
           <Grid container direction="column" spacing={1}>
