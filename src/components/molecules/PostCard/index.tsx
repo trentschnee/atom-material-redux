@@ -1,17 +1,17 @@
-import {    Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Typography } from '@material-ui/core';
+import { Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Typography } from '@material-ui/core';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import Button  from '../../atoms/Button';
-import Excerpt from '../../atoms/ExcerptText';
+import { excerpt } from '../../../utils/formatText';
+import Button from '../../atoms/Button';
 
 interface IPostCardProps {
     title: string,
     body: string,
-    onShare:()=>void,
+    onShare: () => void,
     id: number
 }
 
-const PostCard: React.FunctionComponent<IPostCardProps> = ({ title, body,onShare, id }) => {
+const PostCard: React.FunctionComponent<IPostCardProps> = ({ title, body, onShare, id }) => {
     return (<Card>
 
 
@@ -23,7 +23,10 @@ const PostCard: React.FunctionComponent<IPostCardProps> = ({ title, body,onShare
                     </Typography>
                 </Grid>
                 <Grid item>
-                    <Excerpt description={body} length={70}/>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        {excerpt(body, 70)}...
+    </Typography>
+
                 </Grid>
             </Grid>
 
