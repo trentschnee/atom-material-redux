@@ -1,9 +1,4 @@
-import { Container, CssBaseline, Grid, makeStyles } from '@material-ui/core';
-import { JsxElement, TypeElement } from 'typescript';
-import { PostsStateI } from '../../../store/reducers/posts';
-import { Posts } from '../../../types/Posts';
-import PostsList from '../../organisms/PostsList';
-import Subscribe from '../../organisms/Subscribe';
+import { Grid, makeStyles } from '@material-ui/core';
 import MainLayout from '../MainLayout';
 interface IHomePageTemplateProps {
   header: React.ReactNode,

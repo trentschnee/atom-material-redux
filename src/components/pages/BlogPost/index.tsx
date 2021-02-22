@@ -1,11 +1,9 @@
 import * as React from 'react';
 import Footer from '../../organisms/Footer';
 import Header from '../../organisms/Header';
-import Subscribe from '../../organisms/Subscribe';
 
 import BlogPostTemplate from '../../templates/BlogPost';
 import PostContainer from './containers/PostContainer';
-import PostsContainer from './containers/PostContainer';
 import RelatedPostsContainer from './containers/RelatedPostsContainer';
 interface IBlogPostProps {
 

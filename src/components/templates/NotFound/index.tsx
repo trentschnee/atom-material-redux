@@ -1,9 +1,5 @@
-import { Container, CssBaseline, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Grid, makeStyles, Typography } from '@material-ui/core';
 
-import { PostsStateI } from '../../../store/reducers/posts';
-import { Posts } from '../../../types/Posts';
-import PostsList from '../../organisms/PostsList';
-import Subscribe from '../../organisms/Subscribe';
 import MainLayout from '../MainLayout';
 interface INotFoundTemplateProps {
   header: React.ReactNode,
@@ -23,7 +19,7 @@ const NotFoundTemplate: React.FunctionComponent<INotFoundTemplateProps> = ({ hea
   return <MainLayout header={header} footer={footer}>
 
     <div className={classes.root}>
-      <Grid container  justify="center" alignItems="center" alignContent="center">
+      <Grid container justify="center" alignItems="center" alignContent="center">
         <Grid item>
           <Typography>{children}</Typography>
         </Grid>

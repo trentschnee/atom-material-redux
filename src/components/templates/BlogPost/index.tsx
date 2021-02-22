@@ -1,9 +1,4 @@
-import { Container, CssBaseline, Grid, makeStyles } from '@material-ui/core';
-
-import { PostsStateI } from '../../../store/reducers/posts';
-import { Posts } from '../../../types/Posts';
-import PostsList from '../../organisms/PostsList';
-import Subscribe from '../../organisms/Subscribe';
+import {Grid, makeStyles } from '@material-ui/core';
 import MainLayout from '../MainLayout';
 interface IBlogPostPageTemplateProps {
   header: React.ReactNode,

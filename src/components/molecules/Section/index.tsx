@@ -1,7 +1,6 @@
 import { Grid, Typography } from '@material-ui/core';
 import * as React from 'react';
 import Divider from '../../atoms/Divider';
-import PostCard from '../PostCard';
 
 interface ISectionProps {
     title: string

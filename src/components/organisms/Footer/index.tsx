@@ -1,7 +1,6 @@
-import { Container, Grid, Link, makeStyles, Typography } from '@material-ui/core';
+import { Container, Grid, Link,  Typography } from '@material-ui/core';
 import * as React from 'react';
-import { Paper } from "@material-ui/core";
-import { FC } from 'react';
+
 import MadeWith from '../../molecules/MadeWith';
 interface IFooterProps {
 }

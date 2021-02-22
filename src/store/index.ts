@@ -1,8 +1,6 @@
 // External imports
-import React from 'react'
-import {render} from 'react-dom'
 import {createStore, applyMiddleware, Action} from 'redux'
-import {Provider} from 'react-redux'
+
 import thunk, { ThunkAction } from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 

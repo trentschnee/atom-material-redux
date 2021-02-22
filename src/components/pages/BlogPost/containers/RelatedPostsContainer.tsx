@@ -1,15 +1,10 @@
-import { Button, Grid, makeStyles, Typography } from '@material-ui/core';
-
-import React, { useState } from 'react';
+import React from 'react';
 import { usePosts } from '../../../../hooks/usePosts';
-import Section from '../../../molecules/Section';
-import BlogPost from '../../../organisms/BlogPost';
 import PostsList from '../../../organisms/PostsList';
 
-interface IRelatedPostsContainerProps {
-}
 
-const RelatedPostsContainer: React.FunctionComponent<IRelatedPostsContainerProps> = (props) => {
+
+const RelatedPostsContainer: React.FunctionComponent = () => {
     const { posts } = usePosts();
     const postsSpread = { ...posts, data: posts.data.reverse().slice(0, 4) }
 

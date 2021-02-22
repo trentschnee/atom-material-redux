@@ -1,6 +1,5 @@
 import { MuiThemeProvider, CssBaseline } from '@material-ui/core';
 import React from 'react';
-import logo from './logo.svg';
 import theme from './theme';
 import store from "./store"
 import { Provider } from 'react-redux';

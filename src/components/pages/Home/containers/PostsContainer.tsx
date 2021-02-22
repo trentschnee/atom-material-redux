@@ -1,12 +1,11 @@
-import { Button, Grid, makeStyles } from '@material-ui/core';
+import {   makeStyles } from '@material-ui/core';
 import * as React from 'react';
 import { useState } from 'react';
 import { usePosts } from '../../../../hooks/usePosts';
-import Section from '../../../molecules/Section';
+import Button from '../../../atoms/Button';
 import PostsList from '../../../organisms/PostsList';
 
-interface IPostsContainerProps {
-}
+
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'block',
@@ -15,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         marginButton: theme.spacing(1),
     }
 }));
-const PostsContainer: React.FunctionComponent<IPostsContainerProps> = (props) => {
+const PostsContainer: React.FunctionComponent = () => {
     const { posts } = usePosts();
 
     const [loadingMoreClicks, setLoadingMoreClicks] = useState<number>(1);

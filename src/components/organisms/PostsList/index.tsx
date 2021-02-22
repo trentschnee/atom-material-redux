@@ -18,7 +18,7 @@ const PostsList: React.FunctionComponent<IPostListProps> = ({ onShare, title, po
     <Section title={title}>
       <Grid container spacing={1}>
         {data.map((post, idx) => {
-          const { title, body, id } = post;
+          const {  body, id } = post;
 
           return (<Grid item xs={12} md={6}><PostCard title={`Blog post ${idx}`} body={body} id={id} onShare={() => onShare(id)} /></Grid>);
         })}

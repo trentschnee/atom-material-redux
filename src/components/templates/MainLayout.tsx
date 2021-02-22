@@ -1,8 +1,6 @@
-import { CssBaseline, makeStyles } from '@material-ui/core';
+import {  makeStyles } from '@material-ui/core';
 import * as React from 'react';
-import { JsxElement, TypeElement } from 'typescript';
-import Footer from '../organisms/Footer';
-import Header from '../organisms/Header';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {

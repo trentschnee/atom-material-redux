@@ -1,4 +1,4 @@
-import { Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Typography } from '@material-ui/core';
+import { Card,  CardActions, CardContent,  Grid, Typography } from '@material-ui/core';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { excerpt } from '../../../utils/formatText';

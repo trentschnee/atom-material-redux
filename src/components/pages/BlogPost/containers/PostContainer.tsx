@@ -1,21 +1,11 @@
-import { Button, Grid, makeStyles, Typography } from '@material-ui/core';
+import {  Typography } from '@material-ui/core';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { usePosts } from '../../../../hooks/usePosts';
 import BlogPost from '../../../organisms/BlogPost';
 
-interface IPostContainerProps {
-}
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'block',
-        margin: '0 auto',
-        marginTop: theme.spacing(1),
-        marginButton: theme.spacing(1),
-    }
-}));
-const PostContainer: React.FunctionComponent<IPostContainerProps> = (props) => {
+const PostContainer: React.FunctionComponent = () => {
     let { postID } = useParams<{ postID: string }>();
     const { posts } = usePosts();
     const foundPost = posts.data.find((post) => post.id === Number(postID));
