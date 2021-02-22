@@ -1,6 +1,6 @@
 {
-  "name": "atomic-arrm",
-  "description": "Atomic design for axios, react-router, redux, and material-ui",
+  "name": "atomic-rrm",
+  "description": "Atomic design for react-router, redux, and material-ui",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
